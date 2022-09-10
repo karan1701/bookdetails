@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.rtb</groupId>
 	<artifactId>bookdetails</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>bookdetails</name>
 	<description>Book Details application</description>
 	<properties>
@@ -36,6 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>bookdetails</finalName>
 	</build>
 
 </project>
