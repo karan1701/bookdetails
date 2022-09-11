@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookdetails-app
+  labels:
+    app: bookdetails-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bookdetails-app
+  template:
+    metadata:
+      labels:
+        app: bookdetails-app
+    spec:
+      containers:
+        - name: bookdetails-app
+          image: karan1701/bookdetails:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9092
