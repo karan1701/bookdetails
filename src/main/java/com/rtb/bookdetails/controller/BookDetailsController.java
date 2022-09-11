@@ -33,7 +33,7 @@ public class BookDetailsController {
 
 	@GetMapping("/{bookid}")
 	public Object getBookDetails(@PathVariable(name = "bookid") Integer bookId) {
-		BookDetails bookDetails = booksList.stream().filter(e -> e.getBookId() == bookId).findFirst().orElseThrow();
+		BookDetails bookDetails = booksList.stream().filter(e -> e.getBookId() == bookId).findFirst()get();
 		return bookDetails;
 	}
 
