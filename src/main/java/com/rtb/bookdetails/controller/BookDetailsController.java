@@ -1,6 +1,7 @@
 package com.rtb.bookdetails.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class BookDetailsController {
 			new BookDetails(2, "The Monk Who Sold His Ferrai", "Robin Sharma", 250),
 			new BookDetails(3, "Harry Potter", "J. K. Rowling", 5000),
 			new BookDetails(4, "Five Point Someone", "Chetan Bhagat", 250),
-			new BookDetails(5, "Rich Dad Poor Dad", "Robert Kiyosaki", 450)).toList();
+			new BookDetails(5, "Rich Dad Poor Dad", "Robert Kiyosaki", 450)).collect(Collectors.toList());
 
 	@GetMapping
 	public List<BookDetails> getAllBooksDetails() {
